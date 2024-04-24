@@ -1,15 +1,16 @@
 import imaplib
 import email
-from transformers import pipeline, AutoTokenizer
+from transformers import BartForConditionalGeneration, BartTokenizer, pipeline
 from app.models import db, Email
 from dotenv import load_dotenv
 import os
+
 
 # Load environment variables from .env file
 load_dotenv()
 
 # Initialize the summarizer pipeline
-summarizer = pipeline("summarization", model="knkarthick/MEETING_SUMMARY", tokenizer=AutoTokenizer.from_pretrained("knkarthick/MEETING_SUMMARY"))
+summarizer = pipeline("summarization", model=BartForConditionalGeneration.from_pretrained('facebook/bart-large-cnn'), tokenizer=BartTokenizer.from_pretrained('facebook/bart-large-cnn'))
 
 def fetch_and_summarize_emails():
     # Create an IMAP4_SSL instance
