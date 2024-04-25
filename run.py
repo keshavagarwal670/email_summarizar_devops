@@ -1,13 +1,11 @@
-from app import create_app, db  # Import the create_app function and db object from app package
+from app import create_app
 
-# Create the Flask application
+# Import the Config class from config.py
+from config import Config  
+
+# Create the Flask application with the provided configuration
 app = create_app()
-
-# Add a context processor to make the 'db' object accessible in the Flask shell
-@app.shell_context_processor
-def make_shell_context():
-    return {'db': db}
 
 # Run the Flask application
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000 ,debug=True)

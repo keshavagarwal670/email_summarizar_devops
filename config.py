@@ -1,3 +1,5 @@
+# config.py
+
 import os
 
 class Config:
@@ -5,7 +7,7 @@ class Config:
     SECRET_KEY = os.getenv('SECRET_KEY') or 'your_secret_key'
 
     # Database configuration
-    SQLALCHEMY_DATABASE_URI = 'mysql+mysqlconnector://keshav:Agarwal_77@localhost/email_summarizer_db'
+    SQLALCHEMY_DATABASE_URI = 'mysql+mysqlconnector://root:Agarwal_77@db/email_summarizer_db'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
     # Gmail credentials
