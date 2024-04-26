@@ -1,5 +1,4 @@
 # Dockerfile for web service
-
 FROM python:3.8
 
 # Install MySQL client tools
@@ -20,5 +19,5 @@ COPY wait-for-db.sh /app/
 # Set executable permissions for wait-for-db.sh
 RUN chmod +x wait-for-db.sh
 
-# Command to wait for the database and run the application
-CMD ["./wait-for-db.sh", "db","3306","python", "run.py"]
+# Command to run the application
+CMD ["./wait-for-db.sh", "db", "3306", "python", "run.py"]
