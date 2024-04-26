@@ -20,30 +20,10 @@ pipeline {
         stage('Build Frontend Docker Image') {
             steps {
                 sh '''
-                cd frontend
                 docker build -t agarwalkeshav670/email_summarizer .
                 '''
             }
         }
-
-        // stage('Build Backend Docker Image') {
-        //     steps {
-        //         sh '''
-        //         cd backend
-        //         docker build -t adarshtripathi1/backend-chat .
-        //         '''
-        //     }
-        // }
-
-    //     stage('Test Frontend') {
-    //          steps {
-    //             dir('frontend') {
-    //             sh 'npm install'
-    //             sh 'npm test'
-    //         }
-    //     }
-    // }
-
 
         stage('Push Frontend Docker Image') {
             steps {
@@ -55,17 +35,6 @@ pipeline {
                 }
             }
         }
-
-        // stage('Push Backend Docker Image') {
-        //     steps {
-        //         script {
-        //             docker.withRegistry('', 'DockerHubCred') {
-        //                 sh 'docker tag adarshtripathi1/backend-chat:latest adarshtripathi1/backend-chat:latest'
-        //                 sh 'docker push adarshtripathi1/backend-chat:latest'
-        //             }
-        //         }
-        //     }
-        // }
 
         stage("Ansible Deploy cluster"){
             steps{
