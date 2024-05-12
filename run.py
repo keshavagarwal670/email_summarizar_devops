@@ -8,4 +8,6 @@ app = create_app()
 
 # Run the Flask application
 if __name__ == '__main__':
+    print("Starting the server")
     app.run(host='0.0.0.0', port=5000 ,debug=True)
+    print("server started ---------------------------------")

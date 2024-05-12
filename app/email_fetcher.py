@@ -2,7 +2,7 @@ import logging
 import imaplib
 import email
 from transformers import BartForConditionalGeneration, BartTokenizer, pipeline
-# from app.models import db, Email
+from app.models import db, Email
 from dotenv import load_dotenv
 import os
 
@@ -68,4 +68,3 @@ def fetch_and_summarize_emails():
 
     except Exception as e:
         logging.error(f'Error occurred while fetching and summarizing emails: {str(e)}')
-
