@@ -17,20 +17,21 @@ pipeline {
             }
         }
 
-        stage('Build Frontend Docker Image') {
+           stage('Build Frontend Docker Image') {
             steps {
-                sh '''
-                docker build -t agarwalkeshav670/email_summarizer .
-                '''
+                script {
+                    // Use Docker Pipeline plugin to build the Docker image
+                    docker.build("agarwalkeshav670/email_summarizer")
+                }
             }
         }
 
-        stage('Push Frontend Docker Image') {
+            stage('Push Frontend Docker Image') {
             steps {
                 script {
-                    docker.withRegistry('', 'DockerHubCred') {
-                        sh 'docker tag agarwalkeshav670/email_summarizer:latest agarwalkeshav670/email_summarizer:latest'
-                        sh 'docker push agarwalkeshav670/email_summarizer:latest'
+                    // Use Docker Pipeline plugin to push the Docker image to DockerHub
+                    docker.withRegistry('', DOCKERHUB_CREDENTIALS) {
+                        docker.image("agarwalkeshav670/email_summarizer").push("latest")
                     }
                 }
             }
