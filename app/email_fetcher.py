@@ -2,7 +2,7 @@ import logging
 import imaplib
 import email
 from transformers import BartForConditionalGeneration, BartTokenizer, pipeline
-from app.models import db, Email
+# from app.models import db, Email
 from dotenv import load_dotenv
 import os
 

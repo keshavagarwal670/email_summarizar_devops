@@ -1,28 +1,27 @@
 from flask import Flask
-from dotenv import load_dotenv
 import os
-from .models import db
-from config import Config
+import pymysql
+from .routes import bp
 
 def create_app():
     app = Flask(__name__)
+    app.register_blueprint(bp)
 
-    # Load environment variables from .env file
-    dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
-    if os.path.exists(dotenv_path):
-        load_dotenv(dotenv_path)
+    # Load MySQL configuration from environment variables
+    MYSQL_HOST = os.environ.get('MYSQL_HOST')
+    MYSQL_PORT = os.environ.get('MYSQL_PORT')
+    MYSQL_USER = os.environ.get('MYSQL_USER')
+    MYSQL_PASSWORD = os.environ.get('MYSQL_PASSWORD')
+    MYSQL_DATABASE = os.environ.get('MYSQL_DATABASE')
 
-    app.config.from_object(Config)
-
-    # Initialize the database
-    db.init_app(app)
-
-    with app.app_context():
-        # Create database tables if they don't exist
-        db.create_all()
-
-    # Import and register routes within the application context
-    from . import routes
-    app.register_blueprint(routes.bp)
+    # Database connection setup
+    global connection
+    connection = pymysql.connect(
+        host=MYSQL_HOST,
+        port=int(MYSQL_PORT),
+        user=MYSQL_USER,
+        password=MYSQL_PASSWORD,
+        database=MYSQL_DATABASE
+    )
 
     return app

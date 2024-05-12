@@ -1,0 +1,44 @@
+2024-05-12 11:16:07,201 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.113:5000
+2024-05-12 11:16:07,202 - INFO - [33mPress CTRL+C to quit[0m
+2024-05-12 11:16:07,220 - INFO -  * Restarting with stat
+2024-05-12 11:18:47,397 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.113:5000
+2024-05-12 11:18:47,397 - INFO - [33mPress CTRL+C to quit[0m
+2024-05-12 11:18:47,398 - INFO -  * Restarting with stat
+2024-05-12 11:19:35,545 - WARNING -  * Debugger is active!
+2024-05-12 11:19:37,337 - INFO -  * Debugger PIN: 118-961-716
+2024-05-12 11:32:22,988 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.113:5000
+2024-05-12 11:32:22,988 - INFO - [33mPress CTRL+C to quit[0m
+2024-05-12 11:32:22,991 - INFO -  * Restarting with stat
+2024-05-12 11:35:34,453 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.113:5000
+2024-05-12 11:35:34,453 - INFO - [33mPress CTRL+C to quit[0m
+2024-05-12 11:35:34,555 - INFO -  * Restarting with stat
+2024-05-12 11:37:54,932 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.113:5000
+2024-05-12 11:37:54,932 - INFO - [33mPress CTRL+C to quit[0m
+2024-05-12 11:37:54,934 - INFO -  * Restarting with stat
+2024-05-12 11:38:49,872 - WARNING -  * Debugger is active!
+2024-05-12 11:38:50,757 - INFO -  * Debugger PIN: 846-882-399
+2024-05-12 11:43:33,856 - INFO - 192.168.0.113 - - [12/May/2024 11:43:33] "GET / HTTP/1.1" 200 -
+2024-05-12 11:43:33,953 - INFO - 192.168.0.113 - - [12/May/2024 11:43:33] "GET /static/style.css HTTP/1.1" 200 -
+2024-05-12 11:43:35,530 - INFO - 192.168.0.113 - - [12/May/2024 11:43:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-05-12 11:44:18,477 - INFO - Email fetching and summarization completed successfully.
+2024-05-12 11:44:18,481 - INFO - 192.168.0.113 - - [12/May/2024 11:44:18] "[32mPOST /login HTTP/1.1[0m" 302 -
+2024-05-12 11:44:18,616 - INFO - 192.168.0.113 - - [12/May/2024 11:44:18] "GET /dashboard HTTP/1.1" 200 -
+2024-05-12 11:44:18,640 - INFO - 192.168.0.113 - - [12/May/2024 11:44:18] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2024-05-12 11:45:28,268 - INFO - 192.168.0.113 - - [12/May/2024 11:45:28] "[32mGET /logout HTTP/1.1[0m" 302 -
+2024-05-12 11:45:28,285 - INFO - 192.168.0.113 - - [12/May/2024 11:45:28] "GET / HTTP/1.1" 200 -
+2024-05-12 11:45:28,309 - INFO - 192.168.0.113 - - [12/May/2024 11:45:28] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
