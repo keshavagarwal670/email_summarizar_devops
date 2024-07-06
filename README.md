@@ -1,7 +1,3 @@
-Sure, here's the draft formatted specifically for GitHub:
-
----
-
 # Email Summarization
 
 ## Overview
